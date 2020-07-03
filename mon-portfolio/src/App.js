@@ -25,19 +25,22 @@
 
 
 import React from 'react'; 
-// import './App.css';
+import './App.css';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import AboutMe from './components/AboutMe/AboutMe'
+import AboutMe from './components/AboutMe/AboutMe';
+import Parcours from './components/Parcours/Parcours';
 
 class App extends React.Component{
   render(){
     return(
       <body>
-        <Header />
-        <Footer />
-        <AboutMe />
+        <Header/>
+        <AboutMe/>
+        <Parcours/>
+        {/* <Footer/> */}
+
       </body>
     )
   }

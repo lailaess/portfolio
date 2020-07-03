@@ -6,21 +6,21 @@ import './mysass.scss';
 class Header extends React.Component{
     render(){
         return(
-            <body>
-                <Navbar bg="dark" variant="dark" className="header">
+            <div>
+                <Navbar bg="dark" variant="dark" className="header nav navbar-nav">
                     <Container>
                         
-                            <Col><Nav.Link>About Me</Nav.Link></Col>
-                            <Col><Nav.Link href="#">Parcours</Nav.Link></Col>
-                            <Col><Navbar.Brand>B</Navbar.Brand></Col>
-                            <Col><Nav.Link href="#">Projets</Nav.Link></Col>
+                            <Col><Nav.Link>A Propos</Nav.Link></Col>
+                            <Col><Nav.Link href="#">Formations</Nav.Link></Col>
+                            <Col><Navbar.Brand>Bienvenue</Navbar.Brand></Col>
+                            <Col><Nav.Link href="#">Portfolio</Nav.Link></Col>
                             <Col><Nav.Link href="#">Hobbies</Nav.Link></Col>
                     </Container>
                     <Navbar.Brand>Contact</Navbar.Brand>
 
                 </Navbar>
 
-           </body>
+           </div>
         )
     }
 }

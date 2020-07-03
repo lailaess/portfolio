@@ -1,16 +1,32 @@
 $footer : rgb(128, 0, 0); 
 $color : grey;
-.footer{
+
+
+
+footer{
     background-color: black;
     text-align: center;
-    padding: 20px;
-    position: fixed;
-    left: 0;
+    // padding: 20px;
+    position: relative;
+    // height: 130px;
+    // left: 0;
     bottom: 0;
     // height: 60px;
-    width: 100%;
+    // width: 100%;
     color: $color;
+    // margin-top: 780px;
+
+    // background-color: black;
+
+    // position: absolute;
+    // bottom: 0px;
+    // width: 100%;
+
+
+
 }
+
+
 
 .copyright{
     margin-top: 25px;
