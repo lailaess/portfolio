@@ -32,6 +32,8 @@ import Footer from './components/Footer/Footer';
 import AboutMe from './components/AboutMe/AboutMe';
 import Parcours from './components/Parcours/Parcours';
 import Projets from './components/Projets/Projets';
+import Hobbies from './components/Hobbies/Hobbies';
+import Contact from './components/Contact/Contact';
 
 class App extends React.Component{
   render(){
@@ -41,6 +43,8 @@ class App extends React.Component{
         <AboutMe/>
         <Parcours/>
         <Projets />
+        <Hobbies />
+        <Contact />
         {/* <Footer/> */}
 
       </body>
