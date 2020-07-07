@@ -1,6 +1,8 @@
 import React from 'react';
 import {Container, Row, Col, Image, Button, Form } from 'react-bootstrap';
 
+import Axios from 'axios';
+
 
 
 import emailjs from 'emailjs-com';
@@ -15,7 +17,9 @@ class Contact extends React.Component{
         this.state = {
             name : '', 
             email : '',
-            message: ''
+            message: '',
+            disabled: false,
+            emailSent: null
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -70,44 +74,82 @@ class Contact extends React.Component{
     
 
 
-    handleSubmit(e){
-        e.preventDefault();
+    // handleSubmit(e){
+    //     e.preventDefault();
 
-        const {name, email, message} = this.state
+    //     const {name, email, message} = this.state
 
-        let templateParams = {
-            from_name: email,
-            to_name: 'laila.essadouqi@gmail.com',
-            subject: 'Contact depuis le portfolio',
-            message_html: message
+    //     let templateParams = {
+    //         from_name: email,
+    //         to_name: 'laila.essadouqi@gmail.com',
+    //         subject: 'Contact depuis le portfolio',
+    //         message_html: message
 
-        }
+    //     }
 
-        emailjs.sendForm(
-            'gmail',
-            'portfolio',
-            templateParams,
-            'user_FOasgK3LSYkur2AV1krXo'
+    //     emailjs.sendForm(
+    //         'gmail',
+    //         'portfolio',
+    //         templateParams,
+    //         'user_FOasgK3LSYkur2AV1krXo'
 
-        ).then((result) => {
-            console.log(result.text);
+    //     ).then((result) => {
+    //         console.log(result.text);
             
-        }, (error) => {
-            console.log(error.text);
+    //     }, (error) => {
+    //         console.log(error.text);
             
-        })
+    //     })
 
-        this.resetForm()
-    }
+    //     this.resetForm()
+    // }
 
-    resetForm(){
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+
         this.setState({
-            name: '',
-            email: '',
-            subject: 'Contact depuis le portfolio',
-            message: ''
+            disabled: true
         })
+
+        Axios.post('http://localhost:9090/api/email', this.setState)
+            .then(res => {
+                if(res.data.success){
+                    this.setState({
+                        disabled: true,
+                        emailSent: true
+                    })
+                }
+                else {
+                    this.setState({
+                        disabled: false,
+                        emailSent: false
+                    })
+                }
+            })
+
+            .catch(err => {
+                console.log(err);
+
+                this.setState({
+                    disabled: false,
+                    emailSent: false
+                })
+                
+            })
     }
+
+
+
+
+    // resetForm(){
+    //     this.setState({
+    //         name: '',
+    //         email: '',
+    //         subject: 'Contact depuis le portfolio',
+    //         message: ''
+    //     })
+    // }
 
     render(){
         return(
@@ -138,7 +180,12 @@ class Contact extends React.Component{
                                 <Form.Control as="textarea" rows="4" placeholder="MESSAGE" className="message"  value={this.state.message} onChange={this.handleChange}  required />
                             </Form.Group>
 
-                            <Button variant="primary" type="submit" className="contact_submit-button" onClick={this.sendMessage}>Envoyer</Button>
+                            <Button variant="primary" type="submit" className="contact_submit-button" disabled={this.state.disabled} onClick={this.sendMessage}>Envoyer</Button>
+
+                            {this.state.emailSent === true && <p className="d-inline success-msg">Email envoye</p>}
+                            {this.state.emailSent === true && <p className="d-inline error-msg">Email non envoye</p>}
+
+
                         </Form>
                     {/* )} */}
                 </Container>
