@@ -1,7 +1,9 @@
 import React from 'react';
 import {Container, Row, Col, Image, Button, Form } from 'react-bootstrap';
 
-import * as emailjs from 'emailjs-com';
+
+
+import emailjs from 'emailjs-com';
 
 import './mysass.scss';
 
@@ -17,7 +19,8 @@ class Contact extends React.Component{
         }
 
         this.handleChange = this.handleChange.bind(this);
-        this.sendMessage = this.sendMessage.bind(this)
+        this.sendMessage = this.sendMessage.bind(this);
+        this.handleSubmit= this.handleSubmit.bind(this);
     }
 
     // state = {
@@ -80,13 +83,30 @@ class Contact extends React.Component{
 
         }
 
-        emailjs.send(
+        emailjs.sendForm(
             'gmail',
             'portfolio',
             templateParams,
             'user_FOasgK3LSYkur2AV1krXo'
 
-        )
+        ).then((result) => {
+            console.log(result.text);
+            
+        }, (error) => {
+            console.log(error.text);
+            
+        })
+
+        this.resetForm()
+    }
+
+    resetForm(){
+        this.setState({
+            name: '',
+            email: '',
+            subject: 'Contact depuis le portfolio',
+            message: ''
+        })
     }
 
     render(){
@@ -108,14 +128,14 @@ class Contact extends React.Component{
                                 </Col>
                                 <Col xs="12" md="12" lg="6">
                                     <Form.Group controlId="formBasicEmail">
-                                        <Form.Control type="email" placeholder="EMAIL" className="email" onChange={this.handleChange} value={this.state.email} required />
+                                        <Form.Control type="email" placeholder="EMAIL" className="email"  value={this.state.email} onChange={this.handleChange}  required />
                                     </Form.Group>
                                 </Col>
                             </Row>
                             
                             
                             <Form.Group controlId="ControlTextarea">
-                                <Form.Control as="textarea" rows="4" placeholder="MESSAGE" className="message" onChange={this.handleChange} value={this.state.message} required />
+                                <Form.Control as="textarea" rows="4" placeholder="MESSAGE" className="message"  value={this.state.message} onChange={this.handleChange}  required />
                             </Form.Group>
 
                             <Button variant="primary" type="submit" className="contact_submit-button" onClick={this.sendMessage}>Envoyer</Button>

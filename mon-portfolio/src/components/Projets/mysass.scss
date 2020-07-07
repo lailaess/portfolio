@@ -14,4 +14,15 @@
 
 .image_puissance4{
     height: 300px;
+    
+}
+
+.accueil-image_dymed{
+    transition: height 5sec;
+    transition: width 5sec;
+}
+
+.accueil-image_dymed:hover{
+    height: 800px;
+    width: 800px;
 }
