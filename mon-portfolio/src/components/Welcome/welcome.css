@@ -1,0 +1,90 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap'); */
+/* .carousel-photo {
+    display: block;
+    height: 980px;
+    height: 100%;
+
+} */
+
+/* .carousel-photo h1{
+    color: white;
+    text-align: center;
+    vertical-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: bolder;
+} */
+
+/* .carousel_photo {
+   max-width: 100%;
+   max-height: max-content;
+} */
+
+/* .carousel {
+    border-bottom:5px solid red;
+    padding-bottom: -1px;
+} */
+
+/* .text { */
+    /* position: relative;
+    bottom: 310px; */
+    /* background-color: rgba(255, 255, 255, 0.4); */
+    /* padding: 5px;
+    padding-top: 10px;
+    vertical-align: center;
+    margin-top: auto;
+    margin-bottom: auto; */
+    /* font-weight: bolder; */
+/* } */
+
+/* .photo1 {
+    background-image: url('./photoCarousel/7.jpg');
+    background-size: cover;
+} */
+
+/* .photo2 {
+    background-image: url('./photoCarousel/5.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.photo3 {
+    background-image: url('./photoCarousel/6.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+} */
+
+
+.carouselBeforeContainer {
+    background-image: url('./photoCarousel/5.jpg');
+    /* background-size: 100%; */
+    background-repeat: no-repeat;
+    height: 990px;
+    /* height: 100%; */
+}
+
+/* .mainCarousel {
+    background-color: green;
+} */
+/* .carouselText {
+    background-color: purple;
+} */
+.carouselText h1 {
+    vertical-align: center;
+    font-weight: lighter;
+    font-family: 'Montserrat', sans-serif;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+
+
+}
+
+.carousel .slide {
+    background-color: rgba(128, 0, 128, 0.562);
+    color: white;
+    vertical-align: center;
+    padding-top: 5px;
+}

@@ -1,5 +1,18 @@
-.hobbies{
-    background-color: orange;
+#hobbies{
+    background-color: rgba(128, 0, 128, 0.705);
+    text-align: center;
+  
+
+}
+
+h2 {
+    margin-top: 80px;
+    padding-top: 10px ;
+}
+
+.hobbies-titre {
+    text-transform: uppercase;
+    // font-weight: bolder;
 }
 
 .hobbies h2,
@@ -16,4 +29,57 @@
     height: 100px;
 
     margin-top: 40px;
+}
+
+.lecture {
+    // background-image: url(https://images6.alphacoders.com/409/thumb-350-409208.jpg);
+
+    background: 
+        linear-gradient(
+            rgba(128, 0, 128, 0.144),
+            rgba(128, 0, 128, 0.344)
+            
+
+        ),
+
+            
+        // url('https://images.alphacoders.com/735/thumb-350-735617.jpg');
+        url(https://images6.alphacoders.com/409/thumb-350-409208.jpg);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+
+    margin-bottom: 50px;
+}
+
+.informatique {
+    // background-image: url(https://images4.alphacoders.com/661/thumb-350-661363.jpg);
+
+    background: 
+        linear-gradient(
+            rgba(128, 0, 128, 0.144),
+            rgba(128, 0, 128, 0.344)
+            
+
+        ),
+
+            
+        url(https://images4.alphacoders.com/661/thumb-350-661363.jpg);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    margin-bottom: 50px;
+
+   
+}
+
+.mes-hobbies h2 {
+    color : white;
+    font-weight: bold;
+    position: relative;
+    bottom: 30px;
 }

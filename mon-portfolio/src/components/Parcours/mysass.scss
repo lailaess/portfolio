@@ -1,15 +1,35 @@
-.parcours{
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
+
+
+#parcours{
     // background-color: rgb(255, 244, 95);
     display: block;
     text-align: center;
     padding-top: 50px;
-    padding-bottom: 30px;
+    
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(
+            rgba(255, 255, 255, 0.844),
+            rgba(255, 255, 255, 0.844)
+
+        ),
+
+            
+        url('https://images6.alphacoders.com/368/thumb-1920-368992.jpg');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    // font-family: 'Montserrat', sans-serif;
+
+    
+  
 }
 
-// h2{
-//     display: block;
-//     text-align: center;
-// }
+
 
 .icon{
     height: 50px;
@@ -19,41 +39,7 @@
     font-size: 15px;
 }
 
-// .bar{
-//     box-sizing: border-box;
-//     display: block;
-//     margin: 0;
-//     padding: 0;
-// }
 
-// .bar-graph{
-//     // position: relative;
-//     margin-bottom: 25px;
-//     // box-sizing: border-box;
-//     // width: 100%;
-// }
-
-// .bar-main{
-//     background-color: #ddd;
-//     width: 100%;
-//     height: 3px;
-//     position: relative;
-//     z-index: 1;
-// }
-
-// .bar-pourcentage{
-//     background-color: #000;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     z-index: 2;
-//     width: 75%;
-// }
-
-// .bar-graph{
-//     background-color: #ddd;
-//     height: 5px;
-// }
 
 .skillBar p{
    text-align: left; 
@@ -98,4 +84,83 @@
     width : 70%;
     background-color: #000;
 
+}
+
+.parcours-main-titre {
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.scolaire,
+.professionnel {
+    // margin-left: 1px;
+    padding-right: 50px;
+    // margin-bottom: 90px;
+}
+
+.parcours-titre{
+    color: rebeccapurple;
+    text-transform: uppercase;
+    // font-weight: 900;
+    border-bottom: 1px dotted rgb(175, 175, 175);
+    margin-top: 50px;
+
+}
+
+
+.parcours_ligne {
+    border-bottom: 1px dotted rgb(175, 175, 175);
+    padding-top: 19px;
+}
+
+.parcours_mes-formations {
+    border-left: 1px dotted rgb(175, 175, 175);
+    padding-left: 10px;
+    text-align: center;
+
+}
+
+.professionnel .parcours-titre {
+    padding-bottom: 14px;
+    // margin-bottom: 15px;
+}
+
+.parcours_ligne.vacataire{
+    padding-bottom: 24px;
+}
+
+.competence {
+    margin-top: 90px;
+    border-bottom: hidden;
+    margin-bottom: 30px;
+}
+
+.icon_formations{
+    position: relative;
+    bottom: 5px;
+}
+
+.parcours-titre.professionnel h5 {
+    position: relative;
+    top: 11px;
+}
+
+.cv {
+    margin-top: 90px;
+    background-color: rgba(255, 255, 255, 0.37);
+    border-color: white;
+    
+}
+.cv a {
+    color: purple;
+}
+
+.cv:hover {
+    background-color: purple;
+    border-color: purple;
+    
+}
+
+.cv a:hover{
+    color: white;
 }

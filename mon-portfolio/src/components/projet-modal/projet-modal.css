@@ -1,0 +1,20 @@
+.modal-agrandissement_photo {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.modal-agrandissement_photo:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+Button.modal_button {
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    
+}

@@ -1,4 +1,4 @@
-.contact{
+#contact{
     background-color: #000;
     // display: block;
     // margin-left: auto;
@@ -6,9 +6,11 @@
     margin-bottom: 0px;
 }
 
-.contact h4{
+#contact h4{
     color: whitesmoke;
     text-align: center;
+    margin-bottom: 70px;
+    padding-top: 60px;
 }
 #formBasicName{
     background-color: #000;
@@ -58,4 +60,31 @@
 .contact_submit-button:hover {
     background-color: #fff;
     color: #000;
+}
+
+
+.footer {
+    margin-top: 80px;
+    color: rgb(182, 182, 182);
+    font-size: 15px;
+    text-align: center;
+}
+
+.icon-localisation {
+    height: 30px;
+}
+
+.icon-telephone {
+    height: 30px;
+}
+
+.icon-email {
+    height: 30px;
+}
+
+.icon-linkedin {
+    height: 45px;
+}
+a.totelephone,a.tomail {
+    color: white;
 }

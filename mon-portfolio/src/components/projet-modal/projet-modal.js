@@ -1,6 +1,13 @@
 import React from 'react'
-import { Modal, Button } from "react-bootstrap";
+import { Modal, Button, Container, Col, Row, Image } from "react-bootstrap";
 // import { render } from "node-sass";
+
+import './projet-modal.css';
+import './css/skeleton.css';
+import './css/normalize.css';
+
+import PhotoDYMED from './photoProjets/dymed/dymed_accueil.png';
+
 
 function MyModal(props){
     return(
@@ -9,25 +16,30 @@ function MyModal(props){
                 <Modal.Title id="contained-modal-title-vcenter">D.Y.Med</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <div>
-                    <h5>Site</h5>
-                    <p>A venir ... </p>
-                </div>
-                <div>
-                    <h5>Langages Utilises</h5>
-                    <p>Laravel - React - SQL - CSS</p>
-                </div>
-                <div>
-                    <h5>Description</h5>
-                    <p>Site de vente de produits medicinaux</p>
+                {/* <Row> */}
+                    <Image src={PhotoDYMED} fluid className="modal-agrandissement_photo"/>
+                {/* </Row>
+                <Row> */}
+                    <div className="website">
+                        <h5>Site</h5>
+                        <p>A venir ... </p>
+                    </div>
+                    <div className="langages">
+                        <h5>Langages Utilises</h5>
+                        <p>Laravel - React - SQL - CSS</p>
+                    </div>
+                    <div className="description">
+                        <h5>Description</h5>
+                        <p>Site de vente de produits medicinaux</p>
 
-                    <h6><b>Projet Marketing en groupe realise dans le cadre d'un partenariat avec l'ESSEC</b></h6>
+                        <h6><b>Projet Marketing en groupe realise dans le cadre d'un partenariat avec l'ESSEC</b></h6>
 
-                </div>
+                    </div>
+                {/* </Row> */}
 
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={props.onHide}>Close</Button>
+                <Button className="modal_button" onClick={props.onHide}>Fermé</Button>
             </Modal.Footer>
         </Modal>
     )
@@ -39,7 +51,7 @@ function AppDYMED(){
 
     return(
         <>
-            <Button variant="primary" onClick={() => setModalShow(true)}>En savoir plus</Button>
+            <Button className="modal-button_plus" variant="primary" onClick={() => setModalShow(true)}>En savoir plus</Button>
 
             <MyModal show={modalShow} onHide={() => setModalShow(false)} />
             

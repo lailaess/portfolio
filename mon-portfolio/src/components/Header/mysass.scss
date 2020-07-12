@@ -3,5 +3,58 @@
 .header{
     // position: fixed;
     text-align: center;
+    display: block;
 }
 
+
+.mainNav {
+    // display: inline-block;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    // background-color: rgb(152, 231, 255);
+    background-color: black;
+   
+
+}
+
+.bienvenue p{
+    color: white;
+}
+
+.bienvenue,
+.mr-auto {
+    // display: inline-block;
+    // height: 50px;
+    position: relative;
+    background: none;
+    border: 0px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.mr-auto{
+    margin-right: auto;
+    margin-left: auto;
+    // color: rgb(240, 240, 240);
+    
+}
+
+.navText {
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    word-spacing: 6px;
+    margin-right: 13px;
+}
+
+
+.navbar-toogle.collapsed {
+    border-color: white;
+}
+
+.custom-collapse {
+    border-color: lightgreen;
+}

@@ -1,6 +1,11 @@
 import React from 'react'
-import { Modal, Button } from "react-bootstrap";
+import { Modal, Button, Container, Col, Row, Image } from "react-bootstrap";
 
+import './projet-modal2.css';
+import './css/skeleton.css';
+import './css/normalize.css';
+
+import PhotoPuissance4 from './photoProjets/puissance4/puissance4.png';
 
 function MyModal2(props){
     return(
@@ -9,21 +14,25 @@ function MyModal2(props){
                 <Modal.Title id="contained-modal-title-vcenter">My Puissance 4 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <div>
-                    <h5>Langages Utilises</h5>
-                    <p>HTML/CSS - jQuery</p>
-                </div>
-                <div>
-                    <h5>Description</h5>
-                    <p>Realisation du jeu Puissance 4 avec creation d'un plugin en jQuery</p>
+                {/* <Row> */}
+                    <Image src={PhotoPuissance4} fluid className="modal-agrandissement_photo" />
+                {/* </Row>
+                <Row> */}
+                    <div>
+                        <h5>Langages Utilises</h5>
+                        <p>HTML/CSS - jQuery</p>
+                    </div>
+                    <div>
+                        <h5>Description</h5>
+                        <p>Realisation du jeu Puissance 4 avec creation d'un plugin en jQuery</p>
 
-                    <h6><b>Projet realise dans le cadre de la formation du Samsung Campus</b></h6>
+                        <h6><b>Projet realise dans le cadre de la formation du Samsung Campus</b></h6>
 
-                </div>
-
+                    </div>
+                {/* </Row> */}
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={props.onHide}>Close</Button>
+                <Button className="modal_button" onClick={props.onHide}>Fermé</Button>
             </Modal.Footer>
         </Modal>
     )
@@ -35,7 +44,7 @@ function AppPuissance4(){
 
     return(
         <>
-            <Button variant="primary" onClick={() => setModalShow(true)}>En savoir plus</Button>
+            <Button className="modal-button_plus" variant="primary" onClick={() => setModalShow(true)}>En savoir plus</Button>
 
             <MyModal2 show={modalShow} onHide={() => setModalShow(false)} />
             

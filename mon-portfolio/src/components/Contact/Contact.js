@@ -9,6 +9,11 @@ import emailjs from 'emailjs-com';
 
 import './mysass.scss';
 
+import iconLocalisation from './photoIcon/localisation2.jpg';
+import iconTelephone from './photoIcon/telephone.png';
+import iconEmail from './photoIcon/monmail2.png';
+import iconLinkedin from './photoIcon/linkedin.png';
+
 class Contact extends React.Component{
 
     constructor(props){
@@ -153,7 +158,7 @@ class Contact extends React.Component{
 
     render(){
         return(
-            <div className="contact">
+            <div id="contact" title="contact">
                 <Container>
                    
                         <h4>N'hésitez pas à me contacter</h4>
@@ -188,15 +193,33 @@ class Contact extends React.Component{
 
                         </Form>
                     {/* )} */}
+
+
+                    
                 </Container>
 
-                <footer>
-                    <hr />
+                <div className="footer">
+                    {/* <hr /> */}
                     <Container>
                         <Row>
-                            <Col>Linkedin</Col>
-                            <Col>Samsung Campus</Col>
-                            <Col>Email</Col>
+                            <Col>
+                                <Image src={iconLocalisation} fluid className="icon-localisation" />
+                                <p>Samsung Camupus, 14 rue fructidor 75017</p>
+                            
+                            </Col>
+                            <Col>
+                                <Image src={iconTelephone} fluid className="icon-telephone" />
+                                <a href="tel:+641804081" className="totelephone"><p>06.41.80.40.81</p></a>
+                            </Col>
+                            <Col>
+                                <Image src={iconEmail} fluid className="icon-email" />
+                                <p><a href="mailto:laila.essadouqi@fmail.com" className="tomail">laila.essadouqi@gmail.com</a></p>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <a href="https://www.linkedin.com/in/laila-essadouqi-874ab0174/" target="_blank"><Image src={iconLinkedin} fluid className="icon-linkedin" alt="mon linkedin" /></a>
+                            </Col>
                         </Row>
                         <Row className="copyright">
                             <Col>
@@ -204,7 +227,7 @@ class Contact extends React.Component{
                             </Col>
                         </Row>
                     </Container>  
-                </footer>
+                </div>
            
             </div>
         )

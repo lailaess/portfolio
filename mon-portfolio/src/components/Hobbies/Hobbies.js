@@ -9,23 +9,23 @@ import './mysass.scss';
 class Hobbies extends React.Component{
     render(){
         return(
-            <div className="hobbies">
-                <Container>
-                    <h2>Mes centres d'intérêts</h2>
+            <div id="hobbies" title="hobbies">
+                {/* <Container> */}
+                    <h2 className="hobbies-titre">Mes centres d'intérêts</h2>
 
-                    <Row>
-                        <Col xs="12" md="6" lg="6" xl="lg">
-                            <Image src={PhotoLecture} fluid className="hobbies_image" />
-                            <h6>Lecture</h6>
+                    <Row className="mes-hobbies">
+                        <Col xs="12" md="6" lg="6" xl="lg" className="lecture">
+                            <Image src={PhotoLecture} fluid className="hobbies_image"  hidden/>
+                            <h2>Lecture</h2>
 
                         </Col>
-                        <Col xs="12" md="6" lg="6" xl="lg">
-                            <Image src={PhotoInformatique} fluid className="hobbies_image" />
-                            <h6>Informatique</h6>
+                        <Col xs="12" md="6" lg="6" xl="lg" className="informatique">
+                            <Image src={PhotoInformatique} fluid className="hobbies_image" hidden />
+                            <h2>Informatique</h2>
 
                         </Col>
                     </Row>
-                </Container>
+                {/* </Container> */}
             </div>
         )
     }

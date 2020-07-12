@@ -404,35 +404,28 @@ there.
 
 /* Larger than mobile */
 @media (min-width: 400px) {
-  .parcours{
-    background-color: blue;
-  }
+  
 }
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-  .parcours{
-    background-color: violet;
-  }
+  
 }
 
 /* Larger than tablet */
 @media (min-width: 750px) {
-  .parcours{
-    background-color: red;
-  }
+ 
+  
 }
 
 /* Larger than desktop */
 @media (min-width: 1000px) {
-  .parcours{
-    background-color: green;
-  }
+ 
+  
 }
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
-  .parcours{
-    background-color: yellow;
-  }
+  
+  
 }
